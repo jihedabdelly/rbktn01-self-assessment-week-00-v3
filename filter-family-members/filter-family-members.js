@@ -64,7 +64,7 @@ var filterFamilyMembers = function (familyTree, truthTest) {
   	if (truthTest(familyTree)) {
   		result.push(fullName(familyTree));
   	} else {
-  		return result.join(filterFamilyMembers(familyTree.children, truthTest))
+  		return result.concat(filterFamilyMembers(familyTree.children, truthTest))
   	}
   }
 };
